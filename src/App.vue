@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <b-container>
+    <b-container fluid>
       <b-row>
         <b-col
           cols="12"
           md="6"
         >
-          <h1>DDM AI Quizzle</h1>
-
-          <div class="text text--question">
-            <h4>User question:</h4>
-            <div class="text__box">
-              <p>{{ displayQuestion }}</p>
+          <div class="header">
+            <h1>DDM AI Quizzle</h1>
+  
+            <div class="text text--question">
+              <h4>User question:</h4>
+              <div class="text__box">
+                <p>{{ displayQuestion }}</p>
+              </div>
             </div>
           </div>
 
@@ -99,55 +101,28 @@ h4 {
   font-weight: bold;
 }
 
+.row {
+  overflow: hidden auto;
+  height: 100vh;
+}
+
 .col-md-6 {
+  overflow: hidden auto;
+  max-height: 100vh;
   padding: 1.5rem;
 
   &:first-of-type {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     background-color: black;
     color: white;
-  }
-
-  @media (min-width: 768px) {
-    width: 270px;
-  }
-
-  @media (min-width: 992px) {
-    width: 360px;
-  }
-
-  @media (min-width: 1200px) {
-    width: 480px;
-  }
-
-  @media (min-width: 1400px) {
-    width: 600px;
   }
 }
 
 form {
   input {
     margin: 1rem 0;
-  }
-}
-
-.text {
-  &--question {
-    p {
-      overflow: hidden auto;
-      max-height: 100px;
-      min-height: 100px;
-    }
-  }
-
-  &--answer {
-    .text__box {
-      overflow: hidden auto;
-      max-height: 500px;
-      min-height: 500px;
-    }
   }
 }
 
